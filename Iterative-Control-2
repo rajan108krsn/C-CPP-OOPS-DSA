@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+int main() {
+    int N, i;
+
+    // Input the value of N
+    printf("Enter a value for N: ");
+    scanf("%d", &N);
+
+    // 1. Print MySirG N times
+    printf("1. MySirG\n");
+    for (i = 1; i < N; i++) {
+        printf("MySirG\n");
+    }
+
+    // 2. Print the first N natural numbers
+    printf("2. First %d natural numbers:\n", N);
+    for (i = 1; i <= N; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // 3. Print the first N natural numbers in reverse order
+    printf("3. First %d natural numbers in reverse order:\n", N);
+    for (i = N; i >= 1; i--) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // 4. Print the first N odd natural numbers
+    printf("4. First %d odd natural numbers:\n", N);
+    for (i = 1; i <= 2 * N; i += 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // 5. Print the first N odd natural numbers in reverse order
+    printf("5. First %d odd natural numbers in reverse order:\n", N);
+    for (i = 2 * N - 1; i >= 1; i -= 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // 6. Print the first N even natural numbers
+    printf("6. First %d even natural numbers:\n", N);
+    for (i = 2; i <= 2 * N; i += 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // 7. Print the first N even natural numbers in reverse order
+    printf("7. First %d even natural numbers in reverse order:\n", N);
+    for (i = 2 * N; i >= 2; i -= 2) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // 8. Print squares of the first N natural numbers
+    printf("8. Squares of the first %d natural numbers:\n", N);
+    for (i = 1; i <= N; i++) {
+        printf("%d ", i * i);
+    }
+    printf("\n");
+
+    // 9. Print cubes of the first N natural numbers
+    printf("9. Cubes of the first %d natural numbers:\n", N);
+    for (i = 1; i <= N; i++) {
+        printf("%d ", i * i * i);
+    }
+    printf("\n");
+
+    // 10. Print a table of N
+    printf("10. Table of %d:\n", N);
+    for (i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", N, i, N * i);
+    }
+
+    return 0;
+}
