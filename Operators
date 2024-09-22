@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    // 1. Addition of two numbers
+    int a = 10, b = 20;
+    printf("1. Addition: %d + %d = %d\n", a, b, a + b);
+
+    // 2. Subtraction of two numbers
+    printf("2. Subtraction: %d - %d = %d\n", b, a, b - a);
+
+    // 3. Multiplication of two numbers
+    printf("3. Multiplication: %d * %d = %d\n", a, b, a * b);
+
+    // 4. Division of two numbers
+    printf("4. Division: %d / %d = %d\n", b, a, b / a);
+
+    // 5. Modulus of two numbers
+    printf("5. Modulus: %d %% %d = %d\n", b, a, b % a);
+
+    // 6. Increment a number
+    int x = 5;
+    printf("6. Increment: %d incremented by 1 is %d\n", x, ++x);
+
+    // 7. Decrement a number
+    int y = 7;
+    printf("7. Decrement: %d decremented by 1 is %d\n", y, --y);
+
+    // 8. Compound addition
+    int compound = 15;
+    compound += 5;
+    printf("8. Compound addition: 15 += 5 results in %d\n", compound);
+
+    // 9. Compound subtraction
+    compound -= 3;
+    printf("9. Compound subtraction: 20 -= 3 results in %d\n", compound);
+
+    // 10. Compound multiplication
+    compound *= 2;
+    printf("10. Compound multiplication: 17 *= 2 results in %d\n", compound);
+
+    // 11. Compound division
+    compound /= 4;
+    printf("11. Compound division: 34 /= 4 results in %d\n", compound);
+
+    // 12. Calculate square of a number
+    int num = 6;
+    printf("12. Square of %d is %d\n", num, num * num);
+
+    // 13. Calculate cube of a number
+    printf("13. Cube of %d is %d\n", num, num * num * num);
+
+    // 14. Power of a number (num^power)
+    int base = 2, power = 5;
+    printf("14. %d raised to the power %d is %.0f\n", base, power, pow(base, power));
+
+    // 15. Calculate square root of a number
+    double sqrt_num = 25.0;
+    printf("15. Square root of %.0f is %.0f\n", sqrt_num, sqrt(sqrt_num));
+
+    // 16. Division resulting in floating-point result
+    int m = 7, n = 2;
+    printf("16. Floating point division: %d / %d = %.2f\n", m, n, (float)m / n);
+
+    // 17. Swap two numbers without using a third variable
+    int p = 5, q = 10;
+    printf("17. Before swapping: p = %d, q = %d\n", p, q);
+    p = p + q;
+    q = p - q;
+    p = p - q;
+    printf("   After swapping: p = %d, q = %d\n", p, q);
+
+    // 18. Check if a number is even or odd
+    int number = 7;
+    printf("18. %d is %s\n", number, (number % 2 == 0) ? "even" : "odd");
+
+    // 19. Find the largest of two numbers
+    int n1 = 8, n2 = 12;
+    printf("19. Largest number between %d and %d is %d\n", n1, n2, (n1 > n2) ? n1 : n2);
+
+    // 20. Find the largest of three numbers
+    int num1 = 10, num2 = 15, num3 = 12;
+    int largest = (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+    printf("20. Largest number among %d, %d, and %d is %d\n", num1, num2, num3, largest);
+
+    return 0;
+}
