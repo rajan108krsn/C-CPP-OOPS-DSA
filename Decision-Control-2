@@ -1,0 +1,122 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    // 1. Check whether a given number is a three-digit number or not
+    printf("1. Enter a number: ");
+    scanf("%d", &num);
+    if (num >= 100 && num <= 999)
+        printf("It is a three-digit number.\n");
+    else
+        printf("It is not a three-digit number.\n");
+
+    // 2. Calculate profit or loss percentage
+    float cost_price, selling_price, profit_loss_percentage;
+    printf("2. Enter cost price and selling price: ");
+    scanf("%f %f", &cost_price, &selling_price);
+    if (selling_price > cost_price) {
+        profit_loss_percentage = ((selling_price - cost_price) / cost_price) * 100;
+        printf("Profit percentage: %.2f%%\n", profit_loss_percentage);
+    } else if (cost_price > selling_price) {
+        profit_loss_percentage = ((cost_price - selling_price) / cost_price) * 100;
+        printf("Loss percentage: %.2f%%\n", profit_loss_percentage);
+    } else {
+        printf("No profit, no loss.\n");
+    }
+
+    // 3. Display whether the candidate passed or failed based on 5 subjects
+    int marks[5], total_marks = 0, i;
+    printf("3. Enter marks for 5 subjects: ");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &marks[i]);
+        total_marks += marks[i];
+    }
+    for (i = 0; i < 5; i++) {
+        if (marks[i] < 33) {
+            printf("Failed.\n");
+            break;
+        }
+    }
+    if (i == 5) {
+        printf("Passed.\n");
+    }
+
+    // 4. Check whether a given alphabet is in uppercase or lowercase
+    char ch;
+    printf("4. Enter a character: ");
+    scanf(" %c", &ch);
+    if (ch >= 'A' && ch <= 'Z')
+        printf("Uppercase alphabet.\n");
+    else if (ch >= 'a' && ch <= 'z')
+        printf("Lowercase alphabet.\n");
+    else
+        printf("Not an alphabet.\n");
+
+    // 5. Check whether a given number is divisible by 3 and divisible by 2
+    printf("5. Enter a number: ");
+    scanf("%d", &num);
+    if (num % 3 == 0 && num % 2 == 0)
+        printf("Divisible by both 3 and 2.\n");
+    else
+        printf("Not divisible by both.\n");
+
+    // 6. Check whether a given number is divisible by 7 or divisible by 3
+    printf("6. Enter a number: ");
+    scanf("%d", &num);
+    if (num % 7 == 0 || num % 3 == 0)
+        printf("Divisible by 7 or 3.\n");
+    else
+        printf("Not divisible by 7 or 3.\n");
+
+    // 7. Check whether a given number is positive, negative, or zero
+    printf("7. Enter a number: ");
+    scanf("%d", &num);
+    if (num > 0)
+        printf("Positive number.\n");
+    else if (num < 0)
+        printf("Negative number.\n");
+    else
+        printf("Zero.\n");
+
+    // 8. Check whether a character is an alphabet, digit, or special character
+    printf("8. Enter a character: ");
+    scanf(" %c", &ch);
+    if (ch >= 'A' && ch <= 'Z')
+        printf("Uppercase alphabet.\n");
+    else if (ch >= 'a' && ch <= 'z')
+        printf("Lowercase alphabet.\n");
+    else if (ch >= '0' && ch <= '9')
+        printf("Digit.\n");
+    else
+        printf("Special character.\n");
+
+    // 9. Check if a triangle is valid
+    int side1, side2, side3;
+    printf("9. Enter three sides of a triangle: ");
+    scanf("%d %d %d", &side1, &side2, &side3);
+    if (side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2)
+        printf("Valid triangle.\n");
+    else
+        printf("Invalid triangle.\n");
+
+    // 10. Display number of days in a month based on month number
+    int month;
+    printf("10. Enter month number (1-12): ");
+    scanf("%d", &month);
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            printf("31 days.\n");
+            break;
+        case 4: case 6: case 9: case 11:
+            printf("30 days.\n");
+            break;
+        case 2:
+            printf("28 or 29 days.\n");
+            break;
+        default:
+            printf("Invalid month number.\n");
+    }
+
+    return 0;
+}
