@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+int main() {
+    int N, num1, num2;
+
+    // Input N for sum calculations
+    printf("Enter a value for N: ");
+    scanf("%d", &N);
+
+    // 1. Sum of first N natural numbers
+    int sumNatural = (N * (N + 1)) / 2;
+    printf("1. Sum of first %d natural numbers: %d\n", N, sumNatural);
+
+    // 2. Sum of first N even natural numbers
+    int sumEven = N * (N + 1);
+    printf("2. Sum of first %d even natural numbers: %d\n", N, sumEven);
+
+    // 3. Sum of first N odd natural numbers
+    int sumOdd = N * N;
+    printf("3. Sum of first %d odd natural numbers: %d\n", N, sumOdd);
+
+    // 4. Sum of squares of first N natural numbers
+    int sumSquares = (N * (N + 1) * (2 * N + 1)) / 6;
+    printf("4. Sum of squares of first %d natural numbers: %d\n", N, sumSquares);
+
+    // 5. Sum of cubes of first N natural numbers
+    int sumCubes = sumNatural * sumNatural;
+    printf("5. Sum of cubes of first %d natural numbers: %d\n", N, sumCubes);
+
+    // 6. Factorial of a number
+    printf("Enter a number to calculate factorial: ");
+    scanf("%d", &N);
+    long long factorial = 1;
+    for (int i = 1; i <= N; i++) {
+        factorial *= i;
+    }
+    printf("6. Factorial of %d: %lld\n", N, factorial);
+
+    // 7. Count digits in a given number
+    printf("Enter a number to count digits: ");
+    scanf("%d", &num1);
+    int count = 0;
+    int temp = num1;
+    while (temp != 0) {
+        temp /= 10;
+        count++;
+    }
+    printf("7. Number of digits in %d: %d\n", num1, count);
+
+    // 8. Check whether a number is prime
+    printf("Enter a number to check if it's prime: ");
+    scanf("%d", &num1);
+    int isPrime = 1;
+    if (num1 <= 1) isPrime = 0;
+    for (int i = 2; i * i <= num1; i++) {
+        if (num1 % i == 0) {
+            isPrime = 0;
+            break;
+        }
+    }
+    printf("8. %d is %s\n", num1, isPrime ? "a prime number" : "not a prime number");
+
+    // 9. Calculate LCM of two numbers
+    printf("Enter two numbers to calculate LCM: ");
+    scanf("%d %d", &num1, &num2);
+    int gcd;
+    for (gcd = num1; gcd > 0; gcd--) {
+        if (num1 % gcd == 0 && num2 % gcd == 0) break;
+    }
+    int lcm = (num1 * num2) / gcd;
+    printf("9. LCM of %d and %d: %d\n", num1, num2, lcm);
+
+    // 10. Reverse a given number
+    printf("Enter a number to reverse: ");
+    scanf("%d", &num1);
+    int reversed = 0;
+    while (num1 != 0) {
+        reversed = reversed * 10 + num1 % 10;
+        num1 /= 10;
+    }
+    printf("10. Reverse of the number: %d\n", reversed);
+
+    return 0;
+}
